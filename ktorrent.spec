@@ -51,7 +51,7 @@ rm -f $RPM_BUILD_ROOT%{_datadir}/applnk/Internet/ktorrent.desktop
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{name}.files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/ktcachecheck
 %attr(755,root,root) %{_bindir}/ktorrent
