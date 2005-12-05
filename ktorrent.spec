@@ -7,7 +7,10 @@ Group:		Applications/Networking
 Source0:	http://ktorrent.pwsp.net/downloads/1.1/%{name}-%{version}.tar.gz
 # Source0-md5:	d282e2cef75f2e4cf4bf5a84e0f45d3c
 URL:		http://ktorrent.pwsp.net/
-BuildRequires:	kdelibs-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	kdelibs-devel >= 9:3.2.0
+BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,7 +28,15 @@ Its main features are:
 %setup -q
 
 %build
-%configure
+cp -f /usr/share/automake/config.sub admin
+%{__make} -f admin/Makefile.common cvs
+
+%configure \
+%if "%{_lib}" == "lib64"
+	--enable-libsuffix=64 \
+%endif
+	--%{?debug:en}%{!?debug:dis}able-debug%{?debug:=full} \
+	--with-qt-libraries=%{_libdir}
 %{__make}
 
 %install
