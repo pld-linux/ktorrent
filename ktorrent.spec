@@ -1,4 +1,5 @@
 Summary:	Native KDE BitTorrent client
+Summary(pl):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
 Version:	1.1
 Release:	0.3
@@ -23,6 +24,17 @@ Its main features are:
 - Internet searching using various search engines, you can even add
   your own.
 - UDP Trackers
+
+%description -l pl
+KTorrent to klient BitTorrenta dla KDE.
+
+G³ówne cechy to:
+- ¶ci±ganie plików torrent
+- ograniczanie szybko¶ci uploadu, bacz±ce ¿eby wiêkszo¶æ ludzi nie
+  przesy³a³a nieograniczonej ilo¶ci danych
+- przeszukiwanie Internetu przy u¿yciu ró¿nych wyszukiwarek, mo¿na
+  nawet dodaæ w³asn±
+- trackery UDP
 
 %prep
 %setup -q
