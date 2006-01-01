@@ -1,12 +1,12 @@
 Summary:	Native KDE BitTorrent client
 Summary(pl):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
-Version:	1.1
-Release:	1
+Version:	1.2
+Release:	0.rc1
 License:	GPL
 Group:		Applications/Networking
-Source0:	http://ktorrent.pwsp.net/downloads/1.1/%{name}-%{version}.tar.gz
-# Source0-md5:	d282e2cef75f2e4cf4bf5a84e0f45d3c
+Source0:	http://ktorrent.pwsp.net/downloads/1.2rc1/%{name}-%{version}rc1.tar.gz
+# Source0-md5:	c5dbd27aa19e2c8f8dbe210c9e36b469
 URL:		http://ktorrent.pwsp.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -37,7 +37,7 @@ G³ówne cechy to:
 - trackery UDP
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}rc1
 
 %build
 cp -f /usr/share/automake/config.sub admin
@@ -63,13 +63,41 @@ rm -f $RPM_BUILD_ROOT%{_datadir}/applnk/Internet/ktorrent.desktop
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
+
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/ktcachecheck
 %attr(755,root,root) %{_bindir}/ktorrent
 %attr(755,root,root) %{_bindir}/kttorinfo
 %{_desktopdir}/kde/ktorrent.desktop
-%{_datadir}/apps/%{name}
-%{_datadir}/config.kcfg/ktorrent.kcfg
 %{_iconsdir}/*/*/apps/%{name}.png
 %{_iconsdir}/hicolor/scalable/apps/ktorrent.svgz
+%{_libdir}/kde3/ktinfowidgetplugin.la
+%{_libdir}/kde3/ktinfowidgetplugin.so
+%{_libdir}/kde3/ktipfilterplugin.la
+%{_libdir}/kde3/ktipfilterplugin.so
+%{_libdir}/kde3/ktlogviewerplugin.la
+%{_libdir}/kde3/ktlogviewerplugin.so
+%{_libdir}/kde3/ktpartfileimportplugin.la
+%{_libdir}/kde3/ktpartfileimportplugin.so
+%{_libdir}/kde3/ktsearchplugin.la
+%{_libdir}/kde3/ktsearchplugin.so
+%{_libdir}/kde3/ktupnpplugin.la
+%{_libdir}/kde3/ktupnpplugin.so
+%{_libdir}/libktorrent.la
+%{_libdir}/libktorrent.so.0.0.0
+%{_datadir}/apps/%{name}
+%{_datadir}/config.kcfg/ktorrent.kcfg
+%{_datadir}/config.kcfg/ktinfowidgetplugin.kcfg
+%{_datadir}/config.kcfg/ktipfilterplugin.kcfg
+%{_datadir}/config.kcfg/ktsearchplugin.kcfg
+%{_datadir}/config.kcfg/ktupnpplugin.kcfg
+%{_datadir}/services/ktinfowidgetplugin.desktop
+%{_datadir}/services/ktipfilterplugin.desktop
+%{_datadir}/services/ktlogviewerplugin.desktop
+%{_datadir}/services/ktpartfileimportplugin.desktop
+%{_datadir}/services/ktsearchplugin.desktop
+%{_datadir}/services/ktupnpplugin.desktop
+%{_datadir}/servicetypes/ktorrentplugin.desktop
