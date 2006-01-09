@@ -71,23 +71,20 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/ktcachecheck
 %attr(755,root,root) %{_bindir}/ktorrent
 %attr(755,root,root) %{_bindir}/kttorinfo
-%{_desktopdir}/kde/ktorrent.desktop
-%{_iconsdir}/*/*/apps/%{name}.png
-%{_iconsdir}/hicolor/scalable/apps/ktorrent.svgz
-%{_libdir}/kde3/ktinfowidgetplugin.la
-%{_libdir}/kde3/ktinfowidgetplugin.so
-%{_libdir}/kde3/ktipfilterplugin.la
-%{_libdir}/kde3/ktipfilterplugin.so
-%{_libdir}/kde3/ktlogviewerplugin.la
-%{_libdir}/kde3/ktlogviewerplugin.so
-%{_libdir}/kde3/ktpartfileimportplugin.la
-%{_libdir}/kde3/ktpartfileimportplugin.so
-%{_libdir}/kde3/ktsearchplugin.la
-%{_libdir}/kde3/ktsearchplugin.so
-%{_libdir}/kde3/ktupnpplugin.la
-%{_libdir}/kde3/ktupnpplugin.so
+%attr(755,root,root) %{_libdir}/libktorrent.so.*.*.*
 %{_libdir}/libktorrent.la
-%{_libdir}/libktorrent.so.0.0.0
+%{_libdir}/kde3/ktinfowidgetplugin.la
+%attr(755,root,root) %{_libdir}/kde3/ktinfowidgetplugin.so
+%{_libdir}/kde3/ktipfilterplugin.la
+%attr(755,root,root) %{_libdir}/kde3/ktipfilterplugin.so
+%{_libdir}/kde3/ktlogviewerplugin.la
+%attr(755,root,root) %{_libdir}/kde3/ktlogviewerplugin.so
+%{_libdir}/kde3/ktpartfileimportplugin.la
+%attr(755,root,root) %{_libdir}/kde3/ktpartfileimportplugin.so
+%{_libdir}/kde3/ktsearchplugin.la
+%attr(755,root,root) %{_libdir}/kde3/ktsearchplugin.so
+%{_libdir}/kde3/ktupnpplugin.la
+%attr(755,root,root) %{_libdir}/kde3/ktupnpplugin.so
 %{_datadir}/apps/%{name}
 %{_datadir}/config.kcfg/ktorrent.kcfg
 %{_datadir}/config.kcfg/ktinfowidgetplugin.kcfg
@@ -101,3 +98,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/services/ktsearchplugin.desktop
 %{_datadir}/services/ktupnpplugin.desktop
 %{_datadir}/servicetypes/ktorrentplugin.desktop
+%{_desktopdir}/kde/ktorrent.desktop
+%{_iconsdir}/*/*/apps/%{name}.png
+%{_iconsdir}/hicolor/scalable/apps/ktorrent.svgz
