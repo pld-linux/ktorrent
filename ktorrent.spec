@@ -2,7 +2,7 @@ Summary:	Native KDE BitTorrent client
 Summary(pl):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
 Version:	1.2
-Release:	0.rc1
+Release:	0.rc1.1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.pwsp.net/downloads/1.2rc1/%{name}-%{version}rc1.tar.gz
@@ -44,6 +44,7 @@ cp -f /usr/share/automake/config.sub admin
 %{__make} -f admin/Makefile.common cvs
 
 %configure \
+	--enable-knetwork \
 %if "%{_lib}" == "lib64"
 	--enable-libsuffix=64 \
 %endif
