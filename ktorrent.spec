@@ -33,7 +33,7 @@ KTorrent ist ein BitTorrent Klient für KDE.
 
 Hauptfunktionen sind:
 - Torrent-Dateien Download
-- begränzung des Uploades, so dass Mehrheit der Leute nicht unerlaubt
+- Begränzung des Uploades, so dass Mehrheit der Leute nicht unerlaubt
   unbegränzte Datenflüsse sendet
 - Durchsuchung des Internets mit hilfe diverser Browser, man kann
   sogar den eigenen Browser dazu schreiben
