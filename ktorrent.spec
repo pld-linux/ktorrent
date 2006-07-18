@@ -115,6 +115,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/config.kcfg/ktupnpplugin.kcfg
 %{_datadir}/config.kcfg/ktscanfolderplugin.kcfg
 %{_datadir}/config.kcfg/ktschedulerplugin.kcfg
+%{_datadir}/config.kcfg/ktlogviewerplugin.kcfg
 %{_datadir}/services/ktinfowidgetplugin.desktop
 %{_datadir}/services/ktipfilterplugin.desktop
 %{_datadir}/services/ktlogviewerplugin.desktop
