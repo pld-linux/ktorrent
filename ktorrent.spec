@@ -8,7 +8,8 @@ License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.pwsp.net/downloads/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	f0297ab9ead77ee11f9f46cffa904b89
-Patch0:		kde-ac260.patch
+Patch0:		kde-common-LD_quote.patch
+Patch1:		kde-ac260.patch
 URL:		http://ktorrent.pwsp.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -54,6 +55,7 @@ G³ówne cechy to:
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 cp -f /usr/share/automake/config.sub admin
