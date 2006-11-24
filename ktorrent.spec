@@ -111,6 +111,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde3/ktscanfolderplugin.so
 %{_libdir}/kde3/ktschedulerplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktschedulerplugin.so
+%{_libdir}/kde3/ktrssfeedplugin.la
+%attr(755,root,root) %{_libdir}/kde3/ktrssfeedplugin.so
+%{_libdir}/kde3/ktwebinterfaceplugin.la
+%attr(755,root,root) %{_libdir}/kde3/ktwebinterfaceplugin.so
 %{_datadir}/apps/%{name}
 %{_datadir}/config.kcfg/ktorrent.kcfg
 %{_datadir}/config.kcfg/ktinfowidgetplugin.kcfg
@@ -120,6 +124,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/config.kcfg/ktscanfolderplugin.kcfg
 %{_datadir}/config.kcfg/ktschedulerplugin.kcfg
 %{_datadir}/config.kcfg/ktlogviewerplugin.kcfg
+%{_datadir}/config.kcfg/ktrssfeedplugin.kcfg
+%{_datadir}/config.kcfg/ktwebinterfaceplugin.kcfg
 %{_datadir}/services/ktinfowidgetplugin.desktop
 %{_datadir}/services/ktipfilterplugin.desktop
 %{_datadir}/services/ktlogviewerplugin.desktop
@@ -129,6 +135,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/services/ktscanfolderplugin.desktop
 %{_datadir}/services/ktschedulerplugin.desktop
 %{_datadir}/servicetypes/ktorrentplugin.desktop
+%{_datadir}/services/ktrssfeedplugin.desktop
+%{_datadir}/services/ktwebinterfaceplugin.desktop
 %{_desktopdir}/kde/ktorrent.desktop
 %{_iconsdir}/*/*/apps/%{name}.png
 %{_iconsdir}/hicolor/scalable/apps/ktorrent.svgz
