@@ -6,12 +6,12 @@ Version:	2.0.3
 Release:	2
 License:	GPL
 Group:		Applications/Networking
-Source0:	http://ktorrent.pwsp.net/downloads/%{version}/%{name}-%{version}.tar.gz
+Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	f0297ab9ead77ee11f9f46cffa904b89
 Patch0:		kde-common-LD_quote.patch
 Patch1:		kde-ac260.patch
 Patch2:		%{name}-znow.patch
-URL:		http://ktorrent.pwsp.net/
+URL:		http://ktorrent.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
