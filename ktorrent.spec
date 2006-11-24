@@ -1,16 +1,16 @@
+%define		_beta beta1
 Summary:	Native KDE BitTorrent client
 Summary(de):	Ein nativer KDE BitTorrent Klient
 Summary(pl):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
-Version:	2.0.3
-Release:	2
+Version:	2.1
+Release:	0.%{_beta}.1
 License:	GPL
 Group:		Applications/Networking
-Source0:	http://ktorrent.pwsp.net/downloads/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	f0297ab9ead77ee11f9f46cffa904b89
+Source0:	http://ktorrent.org/downloads/%{version}%{_beta}/%{name}-%{version}%{_beta}.tar.gz
+# Source0-md5:	26382ab6e4f24c18889ff9e1d899d59e
 Patch0:		kde-common-LD_quote.patch
 Patch1:		kde-ac260.patch
-Patch2:		%{name}-znow.patch
 URL:		http://ktorrent.pwsp.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -54,10 +54,9 @@ G³ówne cechy to:
 - trackery UDP
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}%{_beta}
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 cp -f /usr/share/automake/config.sub admin
