@@ -11,7 +11,7 @@ Source0:	http://ktorrent.org/downloads/%{version}%{_beta}/%{name}-%{version}%{_b
 # Source0-md5:	26382ab6e4f24c18889ff9e1d899d59e
 Patch0:		kde-common-LD_quote.patch
 Patch1:		kde-ac260.patch
-URL:		http://ktorrent.pwsp.net/
+URL:		http://ktorrent.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
