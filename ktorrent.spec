@@ -1,6 +1,6 @@
 Summary:	Native KDE BitTorrent client
-Summary(de.UTF-8):   Ein nativer KDE BitTorrent Klient
-Summary(pl.UTF-8):   Natywny klient BitTorrenta dla KDE
+Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
+Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
 Version:	2.0.3
 Release:	2
