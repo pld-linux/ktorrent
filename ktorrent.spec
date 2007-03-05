@@ -1,6 +1,6 @@
 Summary:	Native KDE BitTorrent client
-Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
-Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
+Summary(de):	Ein nativer KDE BitTorrent Klient
+Summary(pl):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
 Version:	2.1.1
 Release:	1
@@ -30,26 +30,26 @@ Its main features are:
   your own.
 - UDP Trackers
 
-%description -l de.UTF-8
-KTorrent ist ein BitTorrent Klient fÃ¼r KDE.
+%description -l de
+KTorrent ist ein BitTorrent Klient für KDE.
 
 Hauptfunktionen sind:
 - Torrent-Dateien Download
-- BegrÃ¤nzung des Uploades, so dass Mehrheit der Leute nicht unerlaubt
-  unbegrÃ¤nzte DatenflÃ¼sse sendet
+- Begränzung des Uploades, so dass Mehrheit der Leute nicht unerlaubt
+  unbegränzte Datenflüsse sendet
 - Durchsuchung des Internets mit hilfe diverser Browser, man kann
   sogar den eigenen Browser dazu schreiben
 - UDP Trackers
 
-%description -l pl.UTF-8
+%description -l pl
 KTorrent to klient BitTorrenta dla KDE.
 
-GÅ‚Ã³wne cechy to:
-- Å›ciÄ…ganie plikÃ³w torrent
-- ograniczanie szybkoÅ›ci uploadu, baczÄ…ce Å¼eby wiÄ™kszoÅ›Ä‡ ludzi nie
-  przesyÅ‚aÅ‚a nieograniczonej iloÅ›ci danych
-- przeszukiwanie Internetu przy uÅ¼yciu rÃ³Å¼nych wyszukiwarek, moÅ¼na
-  nawet dodaÄ‡ wÅ‚asnÄ…
+G³ówne cechy to:
+- ¶ci±ganie plików torrent
+- ograniczanie szybko¶ci uploadu, bacz±ce ¿eby wiêkszo¶æ ludzi nie
+  przesy³a³a nieograniczonej ilo¶ci danych
+- przeszukiwanie Internetu przy u¿yciu ró¿nych wyszukiwarek, mo¿na
+  nawet dodaæ w³asn±
 - trackery UDP
 
 %prep
