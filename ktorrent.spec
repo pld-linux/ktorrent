@@ -2,15 +2,14 @@ Summary:	Native KDE BitTorrent client
 Summary(de):	Ein nativer KDE BitTorrent Klient
 Summary(pl):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
-Version:	2.0.3
-Release:	2
+Version:	2.1.1
+Release:	1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	f0297ab9ead77ee11f9f46cffa904b89
+# Source0-md5:	b4f51ff6a2280ddfd90922e2a36f2866
 Patch0:		kde-common-LD_quote.patch
-Patch1:		kde-ac260.patch
-Patch2:		%{name}-znow.patch
+Patch1:		kde-ac260-lt.patch
 URL:		http://ktorrent.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -57,7 +56,6 @@ G³ówne cechy to:
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 cp -f /usr/share/automake/config.sub admin
@@ -65,9 +63,15 @@ cp -f /usr/share/automake/config.sub admin
 
 %configure \
 	--enable-knetwork \
-%if "%{_lib}" == "lib64"
-	--enable-libsuffix=64 \
-%endif
+	--enable-mt \
+	--disable-static \
+	--with-pic \
+	--with-gnu-ld \
+	--disable-rpath \
+	--disable-embedded \
+	--enable-fast-install=yes \
+	--with-xinerama \
+	--enable-final \
 	--%{?debug:en}%{!?debug:dis}able-debug%{?debug:=full} \
 	--with-qt-libraries=%{_libdir}
 %{__make}
@@ -94,9 +98,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/ktshell
 %attr(755,root,root) %{_bindir}/kttorinfo
 %attr(755,root,root) %{_bindir}/ktupnptest
-%attr(755,root,root) %{_libdir}/libktorrent.so.*.*.*
 %{_libdir}/libktorrent.la
 %{_libdir}/kde3/ktinfowidgetplugin.la
+%attr(755,root,root) %{_libdir}/libktorrent-2.1.1.so
 %attr(755,root,root) %{_libdir}/kde3/ktinfowidgetplugin.so
 %{_libdir}/kde3/ktipfilterplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktipfilterplugin.so
@@ -112,6 +116,12 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde3/ktscanfolderplugin.so
 %{_libdir}/kde3/ktschedulerplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktschedulerplugin.so
+%{_libdir}/kde3/ktrssfeedplugin.la
+%attr(755,root,root) %{_libdir}/kde3/ktrssfeedplugin.so
+%{_libdir}/kde3/ktwebinterfaceplugin.la
+%attr(755,root,root) %{_libdir}/kde3/ktwebinterfaceplugin.so
+%{_libdir}/kde3/ktzeroconfplugin.la
+%attr(755,root,root) %{_libdir}/kde3/ktzeroconfplugin.so
 %{_datadir}/apps/%{name}
 %{_datadir}/config.kcfg/ktorrent.kcfg
 %{_datadir}/config.kcfg/ktinfowidgetplugin.kcfg
@@ -121,6 +131,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/config.kcfg/ktscanfolderplugin.kcfg
 %{_datadir}/config.kcfg/ktschedulerplugin.kcfg
 %{_datadir}/config.kcfg/ktlogviewerplugin.kcfg
+%{_datadir}/config.kcfg/ktrssfeedplugin.kcfg
+%{_datadir}/config.kcfg/ktwebinterfaceplugin.kcfg
 %{_datadir}/services/ktinfowidgetplugin.desktop
 %{_datadir}/services/ktipfilterplugin.desktop
 %{_datadir}/services/ktlogviewerplugin.desktop
@@ -131,6 +143,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/services/ktschedulerplugin.desktop
 %{_datadir}/servicetypes/ktorrentplugin.desktop
 %{_desktopdir}/kde/ktorrent.desktop
+%{_datadir}/services/ktrssfeedplugin.desktop
+%{_datadir}/services/ktwebinterfaceplugin.desktop
+%{_datadir}/services/ktzeroconfplugin.desktop
 %{_iconsdir}/*/*/apps/%{name}.png
 %{_iconsdir}/hicolor/scalable/apps/ktorrent.svgz
 %{_iconsdir}/hicolor/128x128/mimetypes/torrent.png
