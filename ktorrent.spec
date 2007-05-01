@@ -100,7 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/ktupnptest
 %{_libdir}/libktorrent.la
 %{_libdir}/kde3/ktinfowidgetplugin.la
-%attr(755,root,root) %{_libdir}/libktorrent-2.1.1.so
+%attr(755,root,root) %{_libdir}/libktorrent-%{version}.so
 %attr(755,root,root) %{_libdir}/kde3/ktinfowidgetplugin.so
 %{_libdir}/kde3/ktipfilterplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktipfilterplugin.so
