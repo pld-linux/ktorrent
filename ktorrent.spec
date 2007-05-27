@@ -1,14 +1,14 @@
-%define		_beta rc1
+%define		_beta beta1
 Summary:	Native KDE BitTorrent client
 Summary(de.UTF-8):   Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):   Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
-Version:	2.1
+Version:	2.2
 Release:	0.%{_beta}.1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.org/downloads/%{version}%{_beta}/%{name}-%{version}%{_beta}.tar.gz
-# Source0-md5:	d9f1e71d311139061a8687357b6fc3b7
+# Source0-md5:	17189c7da121090123f4b0a409cbfe9d
 Patch0:		kde-common-LD_quote.patch
 Patch1:		kde-ac260-lt.patch
 URL:		http://ktorrent.org/
@@ -94,28 +94,19 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/ktshell
 %attr(755,root,root) %{_bindir}/kttorinfo
 %attr(755,root,root) %{_bindir}/ktupnptest
-%attr(755,root,root) %{_libdir}/libktorrent.so.*.*.*
-%{_libdir}/libktorrent.la
-%{_libdir}/kde3/ktinfowidgetplugin.la
+%attr(755,root,root) %{_libdir}/libktorrent-%{version}%{_beta}.so
 %attr(755,root,root) %{_libdir}/kde3/ktinfowidgetplugin.so
-%{_libdir}/kde3/ktipfilterplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktipfilterplugin.so
-%{_libdir}/kde3/ktlogviewerplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktlogviewerplugin.so
-%{_libdir}/kde3/ktpartfileimportplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktpartfileimportplugin.so
-%{_libdir}/kde3/ktsearchplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktsearchplugin.so
-%{_libdir}/kde3/ktupnpplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktupnpplugin.so
-%{_libdir}/kde3/ktscanfolderplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktscanfolderplugin.so
-%{_libdir}/kde3/ktschedulerplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktschedulerplugin.so
-%{_libdir}/kde3/ktrssfeedplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktrssfeedplugin.so
-%{_libdir}/kde3/ktwebinterfaceplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktwebinterfaceplugin.so
+%attr(755,root,root) %{_libdir}/kde3/ktzeroconfplugin.so
+%attr(755,root,root) %{_libdir}/kde3/ktstatsplugin.so
 %{_datadir}/apps/%{name}
 %{_datadir}/config.kcfg/ktorrent.kcfg
 %{_datadir}/config.kcfg/ktinfowidgetplugin.kcfg
@@ -127,6 +118,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/config.kcfg/ktlogviewerplugin.kcfg
 %{_datadir}/config.kcfg/ktrssfeedplugin.kcfg
 %{_datadir}/config.kcfg/ktwebinterfaceplugin.kcfg
+%{_datadir}/config.kcfg/ktstatsplugin.kcfg
+%{_datadir}/services/ktstatsplugin.desktop
+%{_datadir}/services/ktzeroconfplugin.desktop
 %{_datadir}/services/ktinfowidgetplugin.desktop
 %{_datadir}/services/ktipfilterplugin.desktop
 %{_datadir}/services/ktlogviewerplugin.desktop
