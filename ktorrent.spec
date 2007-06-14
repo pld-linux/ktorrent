@@ -1,4 +1,4 @@
-%define		_beta beta1
+%define		_beta rc1
 Summary:	Native KDE BitTorrent client
 Summary(de.UTF-8):   Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):   Natywny klient BitTorrenta dla KDE
@@ -8,7 +8,7 @@ Release:	0.%{_beta}.1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.org/downloads/%{version}%{_beta}/%{name}-%{version}%{_beta}.tar.gz
-# Source0-md5:	17189c7da121090123f4b0a409cbfe9d
+# Source0-md5:	6ae1640be8d849476c44961961f3557b
 Patch0:		kde-common-LD_quote.patch
 Patch1:		kde-ac260-lt.patch
 URL:		http://ktorrent.org/
