@@ -98,29 +98,18 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/ktshell
 %attr(755,root,root) %{_bindir}/kttorinfo
 %attr(755,root,root) %{_bindir}/ktupnptest
-%{_libdir}/libktorrent.la
-%{_libdir}/kde3/ktinfowidgetplugin.la
-%attr(755,root,root) %{_libdir}/libktorrent-*.*.*.so
+%attr(755,root,root) %{_libdir}/libktorrent-2.2.so
 %attr(755,root,root) %{_libdir}/kde3/ktinfowidgetplugin.so
-%{_libdir}/kde3/ktipfilterplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktipfilterplugin.so
-%{_libdir}/kde3/ktlogviewerplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktlogviewerplugin.so
-%{_libdir}/kde3/ktpartfileimportplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktpartfileimportplugin.so
-%{_libdir}/kde3/ktsearchplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktsearchplugin.so
-%{_libdir}/kde3/ktupnpplugin.la
+%attr(755,root,root) %{_libdir}/kde3/ktstatsplugin.so
 %attr(755,root,root) %{_libdir}/kde3/ktupnpplugin.so
-%{_libdir}/kde3/ktscanfolderplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktscanfolderplugin.so
-%{_libdir}/kde3/ktschedulerplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktschedulerplugin.so
-%{_libdir}/kde3/ktrssfeedplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktrssfeedplugin.so
-%{_libdir}/kde3/ktwebinterfaceplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktwebinterfaceplugin.so
-%{_libdir}/kde3/ktzeroconfplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktzeroconfplugin.so
 %{_datadir}/apps/%{name}
 %{_datadir}/config.kcfg/ktorrent.kcfg
@@ -130,6 +119,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/config.kcfg/ktupnpplugin.kcfg
 %{_datadir}/config.kcfg/ktscanfolderplugin.kcfg
 %{_datadir}/config.kcfg/ktschedulerplugin.kcfg
+%{_datadir}/config.kcfg/ktstatsplugin.kcfg
 %{_datadir}/config.kcfg/ktlogviewerplugin.kcfg
 %{_datadir}/config.kcfg/ktrssfeedplugin.kcfg
 %{_datadir}/config.kcfg/ktwebinterfaceplugin.kcfg
@@ -138,6 +128,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/services/ktlogviewerplugin.desktop
 %{_datadir}/services/ktpartfileimportplugin.desktop
 %{_datadir}/services/ktsearchplugin.desktop
+%{_datadir}/services/ktstatsplugin.desktop
 %{_datadir}/services/ktupnpplugin.desktop
 %{_datadir}/services/ktscanfolderplugin.desktop
 %{_datadir}/services/ktschedulerplugin.desktop
