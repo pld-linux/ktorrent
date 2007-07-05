@@ -3,13 +3,14 @@ Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
 Version:	2.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	6790dd2507895da9d1d468ba3a357277
 Patch0:		kde-common-LD_quote.patch
 Patch1:		kde-ac260-lt.patch
+Patch2:		%{name}-stl.patch
 URL:		http://ktorrent.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -56,6 +57,7 @@ Główne cechy to:
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 cp -f /usr/share/automake/config.sub admin
@@ -71,9 +73,10 @@ cp -f /usr/share/automake/config.sub admin
 	--disable-embedded \
 	--enable-fast-install=yes \
 	--with-xinerama \
-	--enable-final \
+	--disable-final \
 	--%{?debug:en}%{!?debug:dis}able-debug%{?debug:=full} \
 	--with-qt-libraries=%{_libdir}
+
 %{__make}
 
 %install
@@ -82,6 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_datadir}/applnk/Internet/ktorrent.desktop
+rm -f $RPM_BUILD_ROOT%{_libdir}/{kde3/*.la,*.la}
 
 %find_lang %{name} --with-kde
 
