@@ -1,0 +1,18 @@
+using spaces is totaly incorrect because -Wl is treated like linker flag, -z
+probably as compiler flag and 'now' as object file.
+  -sparky
+
+/bin/sh ../libtool --silent --tag=CXX --mode=link "ppc-pld-linux-g++"  -Wnon-virtual-dtor -Wno-long-long -Wundef -ansi -D_XOPEN_SOURCE=500 -D_BSD_SOURCE -Wcast-align -Wconversion -Wchar-subscripts -Wall -W -Wpointer-arith -Wwrite-strings -DNDEBUG -DNO_DEBUG -O2 -O2 -fsigned-char -Wformat-security -Wmissing-format-attribute -fno-exceptions -fno-check-new -fno-common -DQT_CLEAN_NAMESPACE -DQT_NO_ASCII_CAST -DQT_NO_STL -DQT_NO_COMPAT -DQT_NO_TRANSLATION -fexceptions    -Wl -z now -o libktorrent.la -rpath /usr/lib -R /usr/lib -R /usr/lib -R /usr/X11R6/lib -L/usr/X11R6/lib -L/usr/lib  pluginmanager.lo functions.lo expandablewidget.lo pluginmanagerprefpage.lo pluginmanagerwidget.lo pluginmanagerprefpage.moc.lo  ../libktorrent/net/libnet.la ../libktorrent/datachecker/libdatachecker.la ../libktorrent/mse/libmse.la ../libktorrent/migrate/libmigrate.la ../libktorrent/util/libutil.la ../libktorrent/torrent/libtorrent.la ../libktorrent/kademlia/libkademlia.la ../libktorrent/interfaces/libinterfaces.la -lkparts
+ppc-pld-linux-g++: now: No such file or directory
+make[3]: *** [libktorrent.la] Error 1
+
+--- ktorrent-2.0.3/configure.in.in~	2006-10-09 19:04:11.000000000 +0300
++++ ktorrent-2.0.3/configure.in.in	2006-10-12 20:16:39.947245959 +0300
+@@ -1,6 +1,6 @@
+ #MIN_CONFIG(3.3)
+ CXXFLAGS="$CXXFLAGS $KDE_DEFAULT_CXXFLAGS $USE_EXCEPTIONS $USE_RTTI"
+-LDFLAGS="$LDFLAGS -Wl -z now"
++LDFLAGS="$LDFLAGS -Wl,-z,now"
+ 
+ AM_INIT_AUTOMAKE(ktorrent,2.0.3)
+ 
