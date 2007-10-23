@@ -86,7 +86,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_datadir}/applnk/Internet/ktorrent.desktop
-rm -f $RPM_BUILD_ROOT%{_libdir}/{kde3/*.la,*.la}
 
 %find_lang %{name} --with-kde
 
@@ -103,18 +102,31 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/ktshell
 %attr(755,root,root) %{_bindir}/kttorinfo
 %attr(755,root,root) %{_bindir}/ktupnptest
+%{_libdir}/libktorrent.la
 %attr(755,root,root) %{_libdir}/libktorrent-*.*.*.so
+%{_libdir}/kde3/ktinfowidgetplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktinfowidgetplugin.so
+%{_libdir}/kde3/ktipfilterplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktipfilterplugin.so
+%{_libdir}/kde3/ktlogviewerplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktlogviewerplugin.so
+%{_libdir}/kde3/ktpartfileimportplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktpartfileimportplugin.so
+%{_libdir}/kde3/ktsearchplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktsearchplugin.so
+%{_libdir}/kde3/ktstatsplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktstatsplugin.so
+%{_libdir}/kde3/ktupnpplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktupnpplugin.so
+%{_libdir}/kde3/ktscanfolderplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktscanfolderplugin.so
+%{_libdir}/kde3/ktschedulerplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktschedulerplugin.so
+%{_libdir}/kde3/ktrssfeedplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktrssfeedplugin.so
+%{_libdir}/kde3/ktwebinterfaceplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktwebinterfaceplugin.so
+%{_libdir}/kde3/ktzeroconfplugin.la
 %attr(755,root,root) %{_libdir}/kde3/ktzeroconfplugin.so
 %{_datadir}/apps/%{name}
 %{_datadir}/config.kcfg/ktorrent.kcfg
