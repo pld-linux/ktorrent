@@ -2,12 +2,12 @@ Summary:	Native KDE BitTorrent client
 Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
-Version:	2.2.2
-Release:	2
+Version:	2.2.3
+Release:	1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	f3bd4cdcb45cefcd85599907781c6e21
+# Source0-md5:	7ff467ee9443f9fa63769cd8a640932e
 Patch0:		kde-common-LD_quote.patch
 Patch1:		kde-ac260-lt.patch
 Patch2:		%{name}-stl.patch
