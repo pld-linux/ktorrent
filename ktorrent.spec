@@ -145,10 +145,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kde/ktorrent.desktop
 %{_iconsdir}/*/*/apps/%{name}.png
 %{_iconsdir}/hicolor/scalable/apps/ktorrent.svgz
-%{_iconsdir}/hicolor/128x128/mimetypes/torrent.png
-%{_iconsdir}/hicolor/16x16/mimetypes/torrent.png
-%{_iconsdir}/hicolor/22x22/mimetypes/torrent.png
-%{_iconsdir}/hicolor/32x32/mimetypes/torrent.png
-%{_iconsdir}/hicolor/48x48/mimetypes/torrent.png
-%{_iconsdir}/hicolor/64x64/mimetypes/torrent.png
+%{_iconsdir}/hicolor/*x*/mimetypes/torrent.png
 %{_iconsdir}/hicolor/scalable/mimetypes/torrent.svgz
