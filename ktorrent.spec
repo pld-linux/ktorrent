@@ -2,12 +2,12 @@ Summary:	Native KDE BitTorrent client
 Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
-Version:	3.0.2
+Version:	3.1.2
 Release:	1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	a2a3c2a62da2147d22eccefa40c7f5d7
+# Source0-md5:	082c5fb35face3b7290044bc053411a6
 URL:		http://ktorrent.org/
 BuildRequires:	QtCore-devel >= 4.4.0
 BuildRequires:	QtNetwork-devel >= 4.4.0
@@ -101,6 +101,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/ktstatsplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktupnpplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktwebinterfaceplugin.so
+%attr(755,root,root) %{_libdir}/kde4/ktmediaplayerplugin.so
 %attr(755,root,root) %ghost %{_libdir}/libbtcore.so.?
 %attr(755,root,root) %{_libdir}/libbtcore.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libktcore.so.?
@@ -109,29 +110,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libktupnp.so.*.*.*
 %{_desktopdir}/kde4/ktorrent.desktop
 %{_datadir}/apps/ktorrent
-%{_iconsdir}/hicolor/128x128/apps/ktorrent.png
-%{_iconsdir}/hicolor/128x128/mimetypes/torrent.png
-%{_iconsdir}/hicolor/16x16/apps/ktorrent.png
-%{_iconsdir}/hicolor/16x16/mimetypes/torrent.png
-%{_iconsdir}/hicolor/22x22/actions/ktencrypted.png
-%{_iconsdir}/hicolor/22x22/actions/ktremove.png
-%{_iconsdir}/hicolor/22x22/actions/ktstart.png
-%{_iconsdir}/hicolor/22x22/actions/ktstart_all.png
-%{_iconsdir}/hicolor/22x22/actions/ktstop.png
-%{_iconsdir}/hicolor/22x22/actions/ktstop_all.png
-%{_iconsdir}/hicolor/22x22/apps/ktorrent.png
-%{_iconsdir}/hicolor/22x22/mimetypes/torrent.png
-%{_iconsdir}/hicolor/32x32/apps/ktorrent.png
-%{_iconsdir}/hicolor/32x32/mimetypes/torrent.png
-%{_iconsdir}/hicolor/48x48/actions/ktplugins.png
-%{_iconsdir}/hicolor/48x48/apps/ktorrent.png
-%{_iconsdir}/hicolor/48x48/mimetypes/torrent.png
-%{_iconsdir}/hicolor/64x64/actions/ktinfowidget.png
-%{_iconsdir}/hicolor/64x64/actions/ktqueuemanager.png
-%{_iconsdir}/hicolor/64x64/actions/ktupnp.png
-%{_iconsdir}/hicolor/64x64/apps/ktorrent.png
-%{_iconsdir}/hicolor/64x64/mimetypes/torrent.png
-%{_iconsdir}/hicolor/64x64/places/ktprefdownloads.png
 %{_datadir}/kde4/services/ktbwschedulerplugin.desktop
 %{_datadir}/kde4/services/ktinfowidgetplugin.desktop
 %{_datadir}/kde4/services/ktipfilterplugin.desktop
@@ -142,6 +120,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/ktupnpplugin.desktop
 %{_datadir}/kde4/services/ktwebinterfaceplugin.desktop
 %{_datadir}/kde4/servicetypes/ktorrentplugin.desktop
+%{_datadir}/kde4/services/ktmediaplayerplugin.desktop
+%{_iconsdir}/*/*/actions/kt-*.png
+%{_iconsdir}/*/*/apps/ktorrent.png
 
 %files devel
 %defattr(644,root,root,755)
