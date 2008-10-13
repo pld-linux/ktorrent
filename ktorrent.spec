@@ -54,7 +54,7 @@ G艂贸wne cechy to:
 
 %package devel
 Summary:        Header files for ktorrent
-Summary(pl.UTF-8):      Pliki nag舿B贸wkowe ktorrent
+Summary(pl.UTF-8):      Pliki nag艂贸wkowe ktorrent
 Group:          Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -62,7 +62,7 @@ Requires:	%{name} = %{version}-%{release}
 Header files for ktorrent.
 
 %description devel -l pl.UTF-8
-Pliki nag舿B贸wkowe ktorrent.
+Pliki nag艂贸wkowe ktorrent.
 
 %prep
 %setup -q
