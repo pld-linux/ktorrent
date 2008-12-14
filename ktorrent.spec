@@ -2,15 +2,17 @@ Summary:	Native KDE BitTorrent client
 Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
-Version:	3.1.2
+Version:	3.1.5
 Release:	1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	082c5fb35face3b7290044bc053411a6
+# Source0-md5:	2b11f05f2bc70c5b1403335698761d64
 URL:		http://ktorrent.org/
+BuildRequires:	Qt3Support-devel >= 4.4.0
 BuildRequires:	QtCore-devel >= 4.4.0
 BuildRequires:	QtNetwork-devel >= 4.4.0
+BuildRequires:	QtSvg-devel >= 4.4.0
 BuildRequires:	cmake
 BuildRequires:	gmp-devel
 BuildRequires:	kde4-kdelibs-devel
