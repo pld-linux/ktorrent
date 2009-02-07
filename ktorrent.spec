@@ -2,12 +2,12 @@ Summary:	Native KDE BitTorrent client
 Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
-Version:	3.1.5
+Version:	3.1.6
 Release:	1
 License:	GPL
 Group:		Applications/Networking
-Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	2b11f05f2bc70c5b1403335698761d64
+Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}-5.tar.bz2
+# Source0-md5:	a425ac7cfa801961739c1a4d117adeef
 URL:		http://ktorrent.org/
 BuildRequires:	Qt3Support-devel >= 4.4.0
 BuildRequires:	QtCore-devel >= 4.4.0
@@ -48,16 +48,16 @@ KTorrent to klient BitTorrenta dla KDE.
 
 Główne cechy to:
 - ściąganie plików torrent
-- ograniczanie szybkości uploadu, baczące żeby większość ludzi
-  nie przesyłała nieograniczonej ilości danych
+- ograniczanie szybkości uploadu, baczące żeby większość ludzi nie
+  przesyłała nieograniczonej ilości danych
 - przeszukiwanie Internetu przy użyciu różnych wyszukiwarek, można
   nawet dodać własną
 - trackery UDP
 
 %package devel
-Summary:        Header files for ktorrent
-Summary(pl.UTF-8):      Pliki nagłówkowe ktorrent
-Group:          Development/Libraries
+Summary:	Header files for ktorrent
+Summary(pl.UTF-8):	Pliki nagłówkowe ktorrent
+Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
@@ -104,6 +104,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/ktupnpplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktwebinterfaceplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktmediaplayerplugin.so
+%attr(755,root,root) %{_libdir}/kde4/ktzeroconfplugin.so
 %attr(755,root,root) %ghost %{_libdir}/libbtcore.so.?
 %attr(755,root,root) %{_libdir}/libbtcore.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libktcore.so.?
@@ -123,6 +124,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/ktwebinterfaceplugin.desktop
 %{_datadir}/kde4/servicetypes/ktorrentplugin.desktop
 %{_datadir}/kde4/services/ktmediaplayerplugin.desktop
+%{_datadir}/kde4/services/ktzeroconfplugin.desktop
 %{_iconsdir}/*/*/actions/kt-*.png
 %{_iconsdir}/*/*/apps/ktorrent.png
 
