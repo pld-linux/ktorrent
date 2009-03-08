@@ -1,21 +1,25 @@
+#
+%define         qtver   4.4.3
+
 Summary:	Native KDE BitTorrent client
 Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
-Version:	3.1.6
+Version:	3.2
 Release:	1
 License:	GPL
 Group:		Applications/Networking
-Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}-5.tar.bz2
-# Source0-md5:	a425ac7cfa801961739c1a4d117adeef
+Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}.tar.bz2
+# Source0-md5:	e215de7a711b3f9c33044bf97a6d8bfb
 URL:		http://ktorrent.org/
-BuildRequires:	Qt3Support-devel >= 4.4.0
-BuildRequires:	QtCore-devel >= 4.4.0
-BuildRequires:	QtNetwork-devel >= 4.4.0
-BuildRequires:	QtSvg-devel >= 4.4.0
+BuildRequires:	Qt3Support-devel >= %{qtver}
+BuildRequires:	QtCore-devel >= %{qtver}
+BuildRequires:	QtNetwork-devel >= %{qtver}
+BuildRequires:	QtSvg-devel >= %{qtver}
 BuildRequires:	cmake
 BuildRequires:	gmp-devel
 BuildRequires:	kde4-kdelibs-devel
+BuildRequires:	kde4-kdepimlibs-devel
 BuildRequires:	qca-devel >= 2.0.0
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	strigi-devel >= 0.5.5
@@ -105,6 +109,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/ktwebinterfaceplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktmediaplayerplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktzeroconfplugin.so
+%attr(755,root,root) %{_libdir}/kde4/ktdownloadorderplugin.so
+%attr(755,root,root) %{_libdir}/kde4/ktscriptingplugin.so
+%attr(755,root,root) %{_libdir}/kde4/ktsyndicationplugin.so
+%attr(755,root,root) %{_libdir}/kde4/plasma_engine_ktorrent.so
 %attr(755,root,root) %ghost %{_libdir}/libbtcore.so.?
 %attr(755,root,root) %{_libdir}/libbtcore.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libktcore.so.?
@@ -125,7 +133,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/servicetypes/ktorrentplugin.desktop
 %{_datadir}/kde4/services/ktmediaplayerplugin.desktop
 %{_datadir}/kde4/services/ktzeroconfplugin.desktop
+%{_datadir}/kde4/services/ktdownloadorderplugin.desktop
+%{_datadir}/kde4/services/ktscriptingplugin.desktop
+%{_datadir}/kde4/services/ktsyndicationplugin.desktop
+%{_datadir}/kde4/services/plasma-dataengine-ktorrent.desktop
 %{_iconsdir}/*/*/actions/kt-*.png
+%{_iconsdir}/*/*/actions/kt-*.svgz
 %{_iconsdir}/*/*/apps/ktorrent.png
 
 %files devel
