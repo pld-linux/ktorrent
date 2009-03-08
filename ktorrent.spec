@@ -6,7 +6,7 @@ Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
 Version:	3.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}.tar.bz2
@@ -18,6 +18,7 @@ BuildRequires:	QtNetwork-devel >= %{qtver}
 BuildRequires:	QtSvg-devel >= %{qtver}
 BuildRequires:	cmake
 BuildRequires:	gmp-devel
+BuildRequires:	kde4-kdebase-workspace-devel
 BuildRequires:	kde4-kdelibs-devel
 BuildRequires:	kde4-kdepimlibs-devel
 BuildRequires:	qca-devel >= 2.0.0
@@ -113,6 +114,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/ktscriptingplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktsyndicationplugin.so
 %attr(755,root,root) %{_libdir}/kde4/plasma_engine_ktorrent.so
+%attr(755,root,root) %{_libdir}/kde4/plasma_applet_ktorrent.so
 %attr(755,root,root) %ghost %{_libdir}/libbtcore.so.?
 %attr(755,root,root) %{_libdir}/libbtcore.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libktcore.so.?
@@ -137,6 +139,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/ktscriptingplugin.desktop
 %{_datadir}/kde4/services/ktsyndicationplugin.desktop
 %{_datadir}/kde4/services/plasma-dataengine-ktorrent.desktop
+%{_datadir}/kde4/services/plasma-applet-ktorrent.desktop
 %{_iconsdir}/*/*/actions/kt-*.png
 %{_iconsdir}/*/*/actions/kt-*.svgz
 %{_iconsdir}/*/*/apps/ktorrent.png
