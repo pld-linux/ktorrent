@@ -6,7 +6,7 @@ Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
 Version:	3.2
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}.tar.bz2
@@ -141,7 +141,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/plasma-dataengine-ktorrent.desktop
 %{_datadir}/kde4/services/plasma-applet-ktorrent.desktop
 %{_iconsdir}/*/*/actions/kt-*.png
-%{_iconsdir}/*/*/actions/kt-*.svgz
 %{_iconsdir}/*/*/apps/ktorrent.png
 
 %files devel
