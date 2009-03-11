@@ -24,7 +24,6 @@ BuildRequires:	kde4-kdepimlibs-devel
 BuildRequires:	qca-devel >= 2.0.0
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	strigi-devel >= 0.5.5
-Suggests:	kde4-icons
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
