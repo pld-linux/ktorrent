@@ -15,6 +15,7 @@ URL:		http://ktorrent.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
 BuildRequires:	QtNetwork-devel >= %{qtver}
+BuildRequires:	QtScript-devel >= %{qtver}
 BuildRequires:	QtSvg-devel >= %{qtver}
 BuildRequires:	cmake
 BuildRequires:	gmp-devel
