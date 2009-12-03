@@ -17,14 +17,19 @@ BuildRequires:	QtCore-devel >= %{qtver}
 BuildRequires:	QtNetwork-devel >= %{qtver}
 BuildRequires:	QtScript-devel >= %{qtver}
 BuildRequires:	QtSvg-devel >= %{qtver}
+BuildRequires:	automoc4
+BuildRequires:	boost-devel
 BuildRequires:	cmake
+BuildRequires:	gettext-devel
 BuildRequires:	gmp-devel
 BuildRequires:	kde4-kdebase-workspace-devel
 BuildRequires:	kde4-kdelibs-devel
 BuildRequires:	kde4-kdepimlibs-devel
 BuildRequires:	qca-devel >= 2.0.0
+BuildRequires:	qt4-build
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	strigi-devel >= 0.5.5
+BuildRequires:	taglib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
