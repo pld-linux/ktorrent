@@ -5,12 +5,12 @@ Summary:	Native KDE BitTorrent client
 Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
-Version:	3.2.5
+Version:	3.3.1
 Release:	1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	0b0c3ebd2e0125ef65dbf67a584d1295
+# Source0-md5:	6a76e0b3a7ed14966c8096f63fde6e29
 URL:		http://ktorrent.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
@@ -111,13 +111,14 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/ktmediaplayerplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktzeroconfplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktdownloadorderplugin.so
+%attr(755,root,root) %{_libdir}/kde4/ktshutdownplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktscriptingplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktsyndicationplugin.so
 %attr(755,root,root) %{_libdir}/kde4/plasma_engine_ktorrent.so
 %attr(755,root,root) %{_libdir}/kde4/plasma_applet_ktorrent.so
 %attr(755,root,root) %ghost %{_libdir}/libbtcore.so.??
 %attr(755,root,root) %{_libdir}/libbtcore.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libktcore.so.?
+%attr(755,root,root) %ghost %{_libdir}/libktcore.so.??
 %attr(755,root,root) %{_libdir}/libktcore.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libktupnp.so.?
 %attr(755,root,root) %{_libdir}/libktupnp.so.*.*.*
@@ -137,6 +138,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/ktzeroconfplugin.desktop
 %{_datadir}/kde4/services/ktdownloadorderplugin.desktop
 %{_datadir}/kde4/services/ktscriptingplugin.desktop
+%{_datadir}/kde4/services/ktshutdownplugin.desktop
 %{_datadir}/kde4/services/ktsyndicationplugin.desktop
 %{_datadir}/kde4/services/plasma-dataengine-ktorrent.desktop
 %{_datadir}/kde4/services/plasma-applet-ktorrent.desktop
