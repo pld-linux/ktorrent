@@ -1,12 +1,13 @@
 #
 %define         qtver   4.5.3
+%define		kdever	4.4.2
 
 Summary:	Native KDE BitTorrent client
 Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
 Version:	3.3.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}.tar.bz2
@@ -19,14 +20,15 @@ BuildRequires:	QtScript-devel >= %{qtver}
 BuildRequires:	QtSvg-devel >= %{qtver}
 BuildRequires:	automoc4
 BuildRequires:	boost-devel
-BuildRequires:	cmake
+BuildRequires:	cmake >= 2.8.0
 BuildRequires:	gettext-devel
 BuildRequires:	gmp-devel
-BuildRequires:	kde4-kdebase-workspace-devel
-BuildRequires:	kde4-kdelibs-devel
-BuildRequires:	kde4-kdepimlibs-devel
+BuildRequires:	kde4-kdebase-workspace-devel >= %{kdever}
+BuildRequires:	kde4-kdelibs-devel >= %{kdever}
+BuildRequires:	kde4-kdepimlibs-devel >= %{kdever}
 BuildRequires:	qca-devel >= 2.0.0
-BuildRequires:	qt4-build
+BuildRequires:	qt4-build >= %{qtver}
+BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	strigi-devel >= 0.5.5
 BuildRequires:	taglib-devel
@@ -83,9 +85,13 @@ Pliki nagłówkowe ktorrent.
 %build
 install -d build
 cd build
-%cmake \
+%cmake .. \
+	-DCMAKE_BUILD_TYPE=%{!?debug:Release}%{?debug:Debug} \
 	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-	../
+%if "%{_lib}" == "lib64"
+	-DLIB_SUFFIX=64
+%endif
+
 %{__make}
 
 %install
