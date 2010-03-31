@@ -1,24 +1,24 @@
 #
-%define         qtver   4.5.3
+%define         qtver   4.6.2
 %define		kdever	4.4.2
 
 Summary:	Native KDE BitTorrent client
 Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
-Version:	3.3.3
-Release:	2
+Version:	3.3.4
+Release:	1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	afbb14265895eb0d872bd23d02631fc3
+# Source0-md5:	7d7dba06a78d09494199bd4ef82e5527
 URL:		http://ktorrent.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
 BuildRequires:	QtNetwork-devel >= %{qtver}
 BuildRequires:	QtScript-devel >= %{qtver}
 BuildRequires:	QtSvg-devel >= %{qtver}
-BuildRequires:	automoc4
+BuildRequires:	automoc4 >= 0.9.88
 BuildRequires:	boost-devel
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	gettext-devel
@@ -30,7 +30,7 @@ BuildRequires:	qca-devel >= 2.0.0
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.129
-BuildRequires:	strigi-devel >= 0.5.5
+BuildRequires:	strigi-devel >= 0.7.2
 BuildRequires:	taglib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
