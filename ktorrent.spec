@@ -1,9 +1,13 @@
+#
+# Conditional build:
+%bcond_with	arts			# build with aRts support
+
 Summary:	Native KDE BitTorrent client
 Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
 Version:	2.2.8
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}.tar.bz2
@@ -77,6 +81,7 @@ cp -f /usr/share/automake/config.sub admin
 	--enable-fast-install=yes \
 	--with-xinerama \
 	--disable-final \
+	--with%{!?with_arts:out}-arts \
 	--%{?debug:en}%{!?debug:dis}able-debug%{?debug:=full} \
 	--with-qt-libraries=%{_libdir}
 
