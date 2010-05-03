@@ -18,6 +18,7 @@ Patch2:		%{name}-stl.patch
 Patch3:		kde-am.patch
 URL:		http://ktorrent.org/
 BuildRequires:	autoconf
+BuildRequires:	autoconf < 2.64
 BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	gmp-devel
