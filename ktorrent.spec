@@ -27,6 +27,9 @@ BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+# build broken with spaces in CC
+%undefine	with_ccache
+
 %description
 KTorrent is a BitTorrent program for KDE.
 
