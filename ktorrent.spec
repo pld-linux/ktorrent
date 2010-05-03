@@ -11,6 +11,7 @@ Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}.tar.bz2
 Patch0:		kde-common-LD_quote.patch
 Patch1:		kde-ac260-lt.patch
 Patch2:		%{name}-stl.patch
+Patch3:		kde-am.patch
 URL:		http://ktorrent.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -59,6 +60,7 @@ Główne cechy to:
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 cp -f /usr/share/automake/config.sub admin
