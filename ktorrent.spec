@@ -111,6 +111,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/ktorrent
+%attr(755,root,root) %{_bindir}/ktmagnetdownloader
 %attr(755,root,root) %{_bindir}/ktupnptest
 %attr(755,root,root) %{_libdir}/kde4/ktbwschedulerplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktinfowidgetplugin.so
@@ -121,6 +122,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/ktstatsplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktupnpplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktwebinterfaceplugin.so
+%attr(755,root,root) %{_libdir}/kde4/ktmagnetgeneratorplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktmediaplayerplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktzeroconfplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktdownloadorderplugin.so
@@ -129,8 +131,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/ktsyndicationplugin.so
 %attr(755,root,root) %{_libdir}/kde4/plasma_engine_ktorrent.so
 %attr(755,root,root) %{_libdir}/kde4/plasma_applet_ktorrent.so
-%attr(755,root,root) %ghost %{_libdir}/libbtcore.so.??
-%attr(755,root,root) %{_libdir}/libbtcore.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libktcore.so.??
 %attr(755,root,root) %{_libdir}/libktcore.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libktupnp.so.?
@@ -147,12 +147,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/ktupnpplugin.desktop
 %{_datadir}/kde4/services/ktwebinterfaceplugin.desktop
 %{_datadir}/kde4/servicetypes/ktorrentplugin.desktop
+%{_datadir}/kde4/services/ktmagnetgeneratorplugin.desktop
 %{_datadir}/kde4/services/ktmediaplayerplugin.desktop
 %{_datadir}/kde4/services/ktzeroconfplugin.desktop
 %{_datadir}/kde4/services/ktdownloadorderplugin.desktop
 %{_datadir}/kde4/services/ktscriptingplugin.desktop
 %{_datadir}/kde4/services/ktshutdownplugin.desktop
 %{_datadir}/kde4/services/ktsyndicationplugin.desktop
+%{_datadir}/kde4/services/magnet.protocol
 %{_datadir}/kde4/services/plasma-dataengine-ktorrent.desktop
 %{_datadir}/kde4/services/plasma-applet-ktorrent.desktop
 %{_iconsdir}/*/*/actions/kt-*.png
@@ -160,8 +162,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%{_datadir}/apps/cmake/modules/FindBTCore.cmake
-%{_includedir}/libbtcore
-%{_libdir}/libbtcore.so
 %{_libdir}/libktcore.so
 %{_libdir}/libktupnp.so
