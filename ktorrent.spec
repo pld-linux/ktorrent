@@ -1,17 +1,17 @@
 #
 %define         qtver   4.6.2
-%define		kdever	4.4.2
+%define		kdever	4.4.4
 
 Summary:	Native KDE BitTorrent client
 Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
-Version:	3.3.4
+Version:	4.0.0
 Release:	1
 License:	GPL
 Group:		Applications/Networking
-Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	7d7dba06a78d09494199bd4ef82e5527
+Source0:	http://ktorrent.org/downloads/4.0/%{name}-%{version}.tar.bz2
+# Source0-md5:	7862b09dfc1282053c7304f98f3ce0cf
 URL:		http://ktorrent.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
