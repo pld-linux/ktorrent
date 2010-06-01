@@ -68,18 +68,6 @@ Główne cechy to:
   nawet dodać własną
 - trackery UDP
 
-%package devel
-Summary:	Header files for ktorrent
-Summary(pl.UTF-8):	Pliki nagłówkowe ktorrent
-Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
-
-%description devel
-Header files for ktorrent.
-
-%description devel -l pl.UTF-8
-Pliki nagłówkowe ktorrent.
-
 %prep
 %setup -q
 
@@ -101,6 +89,9 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name} --with-kde
+
+# remove lib symlinks - devel subpackage is not needed anyway
+rm -f $RPM_BUILD_ROOT/%{_libdir}/lib*.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -159,8 +150,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/plasma-applet-ktorrent.desktop
 %{_iconsdir}/*/*/actions/kt-*.png
 %{_iconsdir}/*/*/apps/ktorrent.png
-
-%files devel
-%defattr(644,root,root,755)
-%{_libdir}/libktcore.so
-%{_libdir}/libktupnp.so
