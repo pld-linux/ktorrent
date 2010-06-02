@@ -89,10 +89,10 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 # remove lib symlinks - devel subpackage is not needed anyway
-rm -f $RPM_BUILD_ROOT/%{_libdir}/lib*.so
+rm -f $RPM_BUILD_ROOT%{_libdir}/lib*.so
 
 # remove unsupported langs
-rm -rf $RPM_BUILD_ROOT/%{_datadir}/locale/sr@ijekavian*
+rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/sr@ijekavian*
 
 %find_lang %{name} --with-kde
 
