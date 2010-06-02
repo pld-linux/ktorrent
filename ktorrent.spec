@@ -7,7 +7,7 @@ Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
 Version:	4.0.0
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.org/downloads/4.0/%{name}-%{version}.tar.bz2
@@ -88,13 +88,13 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} -C build install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%find_lang %{name} --with-kde
-
 # remove lib symlinks - devel subpackage is not needed anyway
 rm -f $RPM_BUILD_ROOT/%{_libdir}/lib*.so
 
 # remove unsupported langs
 rm -rf $RPM_BUILD_ROOT/%{_datadir}/locale/sr@ijekavian*
+
+%find_lang %{name} --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
