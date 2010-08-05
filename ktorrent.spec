@@ -7,7 +7,7 @@ Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
 Version:	4.0.0
-Release:	4
+Release:	5
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.org/downloads/4.0/%{name}-%{version}.tar.bz2
