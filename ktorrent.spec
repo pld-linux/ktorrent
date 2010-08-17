@@ -1,17 +1,17 @@
 #
-%define         qtver   4.6.2
-%define		kdever	4.4.4
+%define         qtver   4.6.3
+%define		kdever	4.5.0
 
 Summary:	Native KDE BitTorrent client
 Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
-Version:	4.0.0
-Release:	5
+Version:	4.0.2
+Release:	1
 License:	GPL
 Group:		Applications/Networking
-Source0:	http://ktorrent.org/downloads/4.0/%{name}-%{version}.tar.bz2
-# Source0-md5:	7862b09dfc1282053c7304f98f3ce0cf
+Source0:	http://ktorrent.org/downloads/4.0.2/%{name}-%{version}.tar.bz2
+# Source0-md5:	7f4793e098cdb144bc83cec386623dad
 URL:		http://ktorrent.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
@@ -26,7 +26,7 @@ BuildRequires:	gmp-devel
 BuildRequires:	kde4-kdebase-workspace-devel >= %{kdever}
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	kde4-kdepimlibs-devel >= %{kdever}
-BuildRequires:	libktorrent-devel >= 1.0.0
+BuildRequires:	libktorrent-devel >= 1.0.2
 BuildRequires:	qca-devel >= 2.0.0
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
