@@ -6,12 +6,12 @@ Summary:	Native KDE BitTorrent client
 Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
-Version:	4.0.2
+Version:	4.0.5
 Release:	1
 License:	GPL
 Group:		Applications/Networking
-Source0:	http://ktorrent.org/downloads/4.0.2/%{name}-%{version}.tar.bz2
-# Source0-md5:	7f4793e098cdb144bc83cec386623dad
+Source0:	http://ktorrent.org/downloads/4.0.5/%{name}-%{version}.tar.bz2
+# Source0-md5:	3a2e9a92d3a30d44b98ded0e4984ae8a
 URL:		http://ktorrent.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
@@ -26,7 +26,7 @@ BuildRequires:	gmp-devel
 BuildRequires:	kde4-kdebase-workspace-devel >= %{kdever}
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	kde4-kdepimlibs-devel >= %{kdever}
-BuildRequires:	libktorrent-devel >= 1.0.2
+BuildRequires:	libktorrent-devel >= 1.0.5
 BuildRequires:	qca-devel >= 2.0.0
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
@@ -153,3 +153,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/plasma-applet-ktorrent.desktop
 %{_iconsdir}/*/*/actions/kt-*.png
 %{_iconsdir}/*/*/apps/ktorrent.png
+%{_iconsdir}/*/*/actions/kt-*.svgz
