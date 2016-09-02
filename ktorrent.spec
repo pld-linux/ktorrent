@@ -6,13 +6,14 @@ Summary:	Native KDE BitTorrent client
 Summary(de.UTF-8):	Ein nativer KDE BitTorrent Klient
 Summary(pl.UTF-8):	Natywny klient BitTorrenta dla KDE
 Name:		ktorrent
-Version:	4.1.3
+Version:	4.3.1
 Release:	1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://ktorrent.org/downloads/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	4cdd6597a11a465d91e17ac86320883e
-Patch0:		plasma_applet_remove_taskmanager.diff
+# Source0-md5:	696852076315d3aa8ccc8745482872dd
+# Patch0:		plasma_applet_remove_taskmanager.diff
+Patch0:		Fix-compilation-of-ipblocklisttest-target.patch
 URL:		http://ktorrent.org/
 BuildRequires:	Qt3Support-devel >= %{qtver}
 BuildRequires:	QtCore-devel >= %{qtver}
@@ -27,7 +28,7 @@ BuildRequires:	gmp-devel
 BuildRequires:	kde4-kdebase-workspace-devel >= %{kdever}
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	kde4-kdepimlibs-devel >= %{kdever}
-BuildRequires:	libktorrent-devel >= 1.0.5
+BuildRequires:	libktorrent-devel >= 1.3
 BuildRequires:	qca-devel >= 2.0.0
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
@@ -112,7 +113,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/ktorrent
 %attr(755,root,root) %{_bindir}/ktmagnetdownloader
 %attr(755,root,root) %{_bindir}/ktupnptest
-%attr(755,root,root) %{_libdir}/kde4/kio_magnet.so
 %attr(755,root,root) %{_libdir}/kde4/ktbwschedulerplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktinfowidgetplugin.so
 %attr(755,root,root) %{_libdir}/kde4/ktipfilterplugin.so
@@ -135,7 +135,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libktcore.so.*.*.*
 %{_desktopdir}/kde4/ktorrent.desktop
 %{_datadir}/apps/ktorrent
-%{_datadir}/config.kcfg/magnetsettings.kcfg
 %{_datadir}/kde4/services/ktbwschedulerplugin.desktop
 %{_datadir}/kde4/services/ktinfowidgetplugin.desktop
 %{_datadir}/kde4/services/ktipfilterplugin.desktop
